@@ -6,7 +6,6 @@ def checkStatus(file,output):
     with open(file,"r") as check:
         for line in check:
             try:
-                print(type(r.get(line.strip()).status_code))
                 if r.get(line.strip()).status_code == 200:
                     with open(f"{output}", "a") as active:
                         active.write(line.strip())
